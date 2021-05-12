@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript課題1-3</title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+
+    const items = ['掃除', '買い物', '散歩'];
+
+    console.log('=============================');
+    console.log('現在、持っているタスク一覧');
+    console.log('=============================');
+
+    items.forEach(function (value, index) {
+      console.log(index + ':' + value);
+    });
+
+    const name = prompt("タスクを入力してください");
+
+    if (name) {
+      alert("新しいタスクを追加しました。");
+      items.push(name);
+      console.log('=============================');
+      console.log('現在、持っているタスク一覧');
+      console.log('=============================');
+      items.forEach(function (value, index) {
+        console.log(index + ':' + value);
+      });
+      prompt("「確認,追加,削除,完了」のいずれかを入力してください");
+    }
+
+  </script>
+
+</body>
+
+</html>
